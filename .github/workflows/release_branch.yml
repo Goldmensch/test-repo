@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get version
-        run: echo "$GITHUB_REF_NAME" | grep "([0-9]+)" -P -o | head -1 >> $GITHUB_STATE
-      - run: echo "${{env.action_state}}
+        run: echo "version=$(echo "v1234.34.3" | grep "([0-9]+)" -P -o | head -1)" >> $GITHUB_ENV
+      - run: echo "${{env.version}}:
