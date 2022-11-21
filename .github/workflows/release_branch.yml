@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: get version
         run: echo "version=$(echo "v1234.34.3" | grep "([0-9]+)" -P -o | head -1)" >> $GITHUB_ENV
-      - run: echo "${{env.version}}:
+      - run: echo "${{env.version}}"
