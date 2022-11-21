@@ -1,0 +1,10 @@
+name: Creates an release branch on release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  create_brach:
+    steps:
+      - run: echo "$GITHUB_REF_NAME"
