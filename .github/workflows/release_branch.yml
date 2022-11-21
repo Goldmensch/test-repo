@@ -8,4 +8,6 @@ jobs:
   create_brach:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "$GITHUB_REF_NAME"
+      - name: get version
+        run: echo "$GITHUB_REF_NAME" | grep "([0-9]+)" -P -o | head -1
+      - run: echo "${{steps.get_version.outputs.1}}
