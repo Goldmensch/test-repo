@@ -102,4 +102,5 @@ public class ValidateCommitMessageGitTask extends DefaultTask {
         return Arrays.stream(((String) source).split(",")).map(String::trim)
                 .toList();
     }
+
 }
