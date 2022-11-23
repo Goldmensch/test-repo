@@ -28,3 +28,4 @@ tasks {
         dependsOn("setup") // auto install git hook when project is built
     }
 }
+
